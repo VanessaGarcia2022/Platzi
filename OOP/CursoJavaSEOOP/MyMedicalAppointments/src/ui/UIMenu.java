@@ -3,6 +3,9 @@ package ui;
 import java.util.Scanner;
 
 public class UIMenu {
+
+    public static final String[] MONTHS = {"January", "February", "March", "April", "May", "June",
+            "July", "August","September", "November", "December"};
     // necesito que sea publico para poder accederlo desde otras clases
     // que sea estatico para que no se tenga que crear una instancia
     // que sea vacio por que no va a retornar nada.
@@ -52,6 +55,10 @@ public class UIMenu {
             switch (response){
                 case 1:
                     System.out.println("::Book an appointment");
+                    for (int i = 1; i < 4; i++) {
+                        System.out.println(i + ". " + MONTHS[i]);
+
+                    }
                     break;
                 case 2:
                     System.out.println("::My appointments");
